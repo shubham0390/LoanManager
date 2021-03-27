@@ -1,3 +1,18 @@
+/*
+ * Copyright 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.enfle.loanmanager.splash
 
 import android.app.Activity
@@ -25,7 +40,6 @@ import com.firebase.ui.auth.ErrorCodes
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.ActionCodeSettings
 import com.google.firebase.auth.FirebaseAuth
-import java.util.logging.Handler
 
 @Composable
 fun SplashScreen(navController: NavController) {
@@ -47,9 +61,12 @@ fun SplashScreen(navController: NavController) {
             }
         }
 
-        android.os.Handler(Looper.getMainLooper()).postDelayed({
-            launcher.launch(getSingInIntent())
-        }, 500)
+        android.os.Handler(Looper.getMainLooper()).postDelayed(
+            {
+                launcher.launch(getSingInIntent())
+            },
+            500
+        )
 
         response.value?.let { safeResponse ->
             HandleLoginFailure(safeResponse)
@@ -91,12 +108,12 @@ fun getSingInIntent(): Intent {
     val actionCodeSettings = ActionCodeSettings.newBuilder()
         .setAndroidPackageName(
             "com.enfle.loanmanager",
-            true,/*installIfNotAvailable*/
+            true, /*installIfNotAvailable*/
             null /*minimumVersion*/
         )
         .setHandleCodeInApp(true)
         .setUrl("https://google.com") // This URL needs to be whitelisted
-        .build();
+        .build()
 
     return AuthUI.getInstance()
         .createSignInIntentBuilder()
