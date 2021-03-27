@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "90371542820",
+    "project_id": "loanmanager-e9591",
+    "storage_bucket": "loanmanager-e9591.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90371542820:android:12c64266e92334c1ec2db1",
+        "android_client_info": {
+          "package_name": "com.enfle.loanmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90371542820-lh6k7l5f42vrg67tq4vla8525133kmmh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enfle.loanmanager",
+            "certificate_hash": "1784fe3f0176c8bf49f42804344083ed5d087dd0"
+          }
+        },
+        {
+          "client_id": "90371542820-85e5esr36qqggn86ur9g975ijmkhlmk8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnEzWsHGjisKJc-n-sHRrZ4Rj4vo2mbOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90371542820-85e5esr36qqggn86ur9g975ijmkhlmk8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
